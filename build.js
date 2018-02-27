@@ -36,12 +36,13 @@ if (typeof something === "undefined") {
 }
 var invoiceRootRel = path.dirname(args.input);
 var invoiceRootAbs = path.resolve(invoiceRootRel);
-var invoiceConfigPath = path.join(invoiceRootRel, configTemp);
+var invoiceConfigTempPath = path.join(invoiceRootAbs, configTemp);
+var invoiceConfigPath = path.join(path.relative(invoiceRootRel, '.'), args.config).replace('\\', '/');
 var invoiceConfigData = JSON.stringify({
-    base: args.config,
+    parent: invoiceConfigPath,
     language: args.language,
 });
-fs.writeFileSync(invoiceConfigPath, invoiceConfigData); 
+fs.writeFileSync(invoiceConfigTempPath, invoiceConfigData); 
 
 /* Server */
 console.log(`Serving: ${invoiceRootAbs}`);

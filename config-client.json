@@ -1,5 +1,5 @@
 {
-    "base": "config-base.json",
+    "parent": "config-base.json",
     "client": {
         "name": "Umbrella Corp.",
         "address": "123 Queen Victoria St",

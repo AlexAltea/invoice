@@ -1,5 +1,5 @@
 {
-    "base": "config-client.json",
+    "parent": "config-client.json",
     "invoice": {
         "id": "123",
         "created": "2018-01-01",
