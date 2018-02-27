@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Invoice</title>
+    <!-- Dependencies -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Invoice -->
+    <link rel="stylesheet" href="invoice.css">
+</head>
+
+<body>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <span class="t-invoice"></span>
+                            </td>
+                            
+                            <td>
+                                <span class="t-invoice"></span> #:
+                                <span class="invoice-id"></span>
+                                <br>
+                                <span class="t-invoice-created"></span>:
+                                <span class="invoice-created"></span>
+                                <br>
+                                <span class="t-invoice-due"></span>:
+                                <span class="invoice-due"></span>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="information-company">
+                                <span class="t-invoice-from"></span><br>
+                                <span id="company-name"></span><br>
+                                <span id="company-address"></span><br>
+                                <span id="company-town"></span><br>
+                                <span id="company-country"></span><br>
+                            </td>
+                            
+                            <td class="information-client">
+                                <span class="t-invoice-to"></span><br>
+                                <span id="client-name"></span><br>
+                                <span id="client-address"></span><br>
+                                <span id="client-town"></span><br>
+                                <span id="client-country"></span><br>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+            
+        <table class="invoice-payment" cellpadding="0" cellspacing="0">
+            <tr class="heading">
+                <td>
+                    <span class="t-payment-method"></span>
+                </td>
+            </tr>
+            
+            <tr class="details">
+                <td>
+                    <span class="payment-method"></span><br>
+                    <span class="payment-details"></span>
+                </td>
+            </tr>
+        </table>
+
+        <table class="invoice-items" cellpadding="0" cellspacing="0">    
+            <tr class="heading">
+                <td><span class="t-item"></span></td>
+                <td><span class="t-price"></span></td>
+            </tr>
+        </table>
+        
+        <div class="invoice-summary">
+            <div class="invoice-total"></div>
+            <div class="invoice-final"></div>
+            <div class="invoice-exchange"></div>
+        </div>
+    </div>
+    <!-- Dependencies -->
+    <script src="externals/jquery-3.3.1.min.js"></script>
+    <!-- Invoice -->
+    <script src="invoice.js"></script>
+</body>
+</html>

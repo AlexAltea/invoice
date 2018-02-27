@@ -1,0 +1,14 @@
+{
+    "company": {
+        "name": "Aperture Science, Inc.",
+        "address": "Brevort Lake Rd 1234",
+        "zip": "49760",
+        "city": "Allenville",
+        "state": "Michigan",
+        "country": "us"
+    },
+    "invoice": {
+        "paymentMethod": "wire",
+        "iban": "US12 3456 7890 1234 5678 9012"
+    }
+}

@@ -1,0 +1,7 @@
+# Invoice
+build
+private
+config-temp.json
+
+# Node
+node_modules

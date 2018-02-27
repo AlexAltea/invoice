@@ -1,0 +1,10 @@
+{
+    "base": "config-base.json",
+    "client": {
+        "name": "Umbrella Corp.",
+        "address": "123 Queen Victoria St",
+        "zip": "EC4N",
+        "city": "London",
+        "country": "gb"
+    }
+}

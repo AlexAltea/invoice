@@ -1,0 +1,24 @@
+{
+  "name": "invoice",
+  "version": "1.0.0",
+  "description": "Template to generate HTML/PDF invoices",
+  "main": "invoice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexAltea/invoice.git"
+  },
+  "author": "Alexandro Sanchez Bach",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexAltea/invoice/issues"
+  },
+  "homepage": "https://github.com/AlexAltea/invoice#readme",
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "chrome-headless-render-pdf": "^1.5.1",
+    "http-server": "^0.11.1"
+  }
+}

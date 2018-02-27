@@ -1,0 +1,23 @@
+{
+    "base": "config-client.json",
+    "invoice": {
+        "id": "123",
+        "created": "2018-01-01",
+        "due": "2018-01-01"
+    },
+    "projects": [{
+        "name": "Aperture Science Handheld Portal Device",
+        "amount": 10000
+    }, {
+        "name": "Aperture Science Weighted Pivot Cube",
+        "amount": 7200
+    }, {
+        "name": "Aperture Science Propulsion Gel",
+        "amount": 500
+    }, {
+        "name": "Aperture Science Repulsion Gel",
+        "amount": 500
+    }],
+    "currencySrc": "USD",
+    "currencyDest": "USD"
+}
