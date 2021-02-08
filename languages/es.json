@@ -12,7 +12,8 @@
             "exchange-rate": "Cambio",
             "wire": "Transferencia bancaria",
             "price": "Importe",
-            "item": "Descripción"
+            "item": "Descripción",
+            "co": "a/c"
         },
         "normalization": {
         },

@@ -31,6 +31,14 @@
     color: #555;
 }
 
+.invoice-box .information #company-name {
+    font-weight: bold;
+}
+
+.invoice-box .information #client-name {
+    font-weight: bold;
+}
+
 .invoice-box table {
     width: 100%;
     line-height: inherit;

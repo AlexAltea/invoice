@@ -48,6 +48,14 @@ function fmtString(string) {
     return string;
 }
 
+function fmtCareof(name) {
+    if (typeof name !== "undefined") {
+        const prefix = language.strings.messages.co;
+        return prefix + ' ' + fmtString(name) + '<br>';
+    }
+    return '';
+}
+
 function fmtLocation(zip, town, state) {
     var result = town;
     if (typeof state !== "undefined") {
@@ -138,6 +146,8 @@ function applyConfiguration(config) {
     
     $('#client-name').html(
         fmtString(config.client.name));
+    $('#client-co').html(
+        fmtCareof(config.client.co));
     $('#client-address').html(
         fmtString(config.client.address));
     $('#client-town').html(

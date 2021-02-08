@@ -12,7 +12,8 @@
             "exchange-rate": "Exchange rate",
             "wire": "Wire transfer",
             "price": "Price",
-            "item": "Item"
+            "item": "Item",
+            "co": "c/o"
         },
         "normalization": {
             "á": "a", "é": "e", "í": "i", "ó": "o", "ú": "u",
