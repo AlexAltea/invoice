@@ -18,7 +18,7 @@
   "homepage": "https://github.com/AlexAltea/invoice#readme",
   "dependencies": {
     "argparse": "^1.0.10",
-    "chrome-headless-render-pdf": "^1.5.1",
-    "http-server": "^0.11.1"
+    "chrome-headless-render-pdf": "^1.9.0",
+    "http-server": "^0.11.2"
   }
 }
