@@ -5,7 +5,7 @@ const httpServer = require('http-server');
 const pdfRenderer = require('chrome-headless-render-pdf');
 
 /* Configuration */
-const chromePath = 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+const chromePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
 const configTemp = 'config-temp.json';
 const serverPort = 8123;
 
