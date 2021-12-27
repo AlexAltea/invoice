@@ -28,4 +28,4 @@ for (const config of configs) {
     totals[config.currencyDest] = totals[config.currencyDest] || 0;
     totals[config.currencyDest] += total;
 }
-console.log(totals);
+console.log(JSON.stringify(totals));

@@ -23,4 +23,4 @@ for (const config of configs) {
     }
     entities.push(config.company);
 }
-console.log(entities);
+console.log(JSON.stringify(entities));

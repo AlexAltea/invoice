@@ -23,4 +23,4 @@ for (const config of configs) {
     }
     clients.push(config.client);
 }
-console.log(clients);
+console.log(JSON.stringify(clients));
