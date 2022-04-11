@@ -18,7 +18,9 @@ Additional accounting tools are available via separate NodeJS scripts:
     ```bash
     node tools/invoice-sum config1.json [config2.json [...]]
     ```
-    Examples:
+    <details>
+    <summary>Examples</summary>
+
     - Add quarterly income:
         ```bash
         $ node tools/invoice-sum path/to/invoices/2021-Q1/*/config-project.json
@@ -28,12 +30,16 @@ Additional accounting tools are available via separate NodeJS scripts:
         ```bash
         $ node tools/invoice-sum path/to/invoices/2021-*/*/config-project.json
         { "USD": 74000, "EUR": 8000 }
-        ```
+        ``` 
+    </details>
+
 - __Identify unique entities__:
     ```bash
     node tools/invoice-entities config1.json [config2.json [...]]
     ```
-    Examples:
+    <details>
+    <summary>Examples</summary>
+
     - Get all used entities:
         ```bash
         $ node tools/invoice-entities path/to/invoices/**/*.json
@@ -44,11 +50,15 @@ Additional accounting tools are available via separate NodeJS scripts:
             "state": "Michigan",
             "country": "us" } ]
         ```
+    </details>
+
 - __Identify unique clients__:
     ```bash
     node tools/invoice-clients config1.json [config2.json [...]]
     ```
-    Examples:
+    <details>
+    <summary>Examples</summary>
+
     - Get all known clients:
         ```bash
         $ node tools/invoice-clients path/to/invoices/**/*.json
@@ -63,3 +73,4 @@ Additional accounting tools are available via separate NodeJS scripts:
             "city": "London",
             "country": "gb" } ]
         ```
+    </details>
