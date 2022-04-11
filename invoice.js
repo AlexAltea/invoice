@@ -114,7 +114,7 @@ function loadConfiguration(path) {
             break;
         }
         var response = JSON.parse(request.responseText);
-        config = $.extend(true, {}, config, response);
+        config = Object.assign({}, config, response);
         var newpath = response.parent;
         if (typeof newpath === "undefined") {
             break;
@@ -126,48 +126,57 @@ function loadConfiguration(path) {
 
 function addExtra(selector, field) {
     if (typeof field !== "undefined") {
-        $(selector).append(
-            '<span>' + field + '</span><br>'
-        )
+        const elements = document.querySelectorAll(selector)
+        for (let e of elements) {
+            e.innerHTML += '<span>' + field + '</span><br>';
+        }
+    }
+}
+
+function setHtml(selector, html) {
+    const elements = document.querySelectorAll(selector);
+    for (let e of elements) {
+        e.innerHTML = html;
     }
 }
 
 function applyConfiguration(config) {
-    $('#company-name').html(
+    setHtml('#company-name',
         fmtString(config.company.name));
-    $('#company-address').html(
+    setHtml('#company-address',
         fmtString(config.company.address));
-    $('#company-town').html(
+    setHtml('#company-town',
         fmtLocation(config.company.zip, config.company.city, config.company.state));
-    $('#company-country').html(
+    setHtml('#company-country',
         fmtCountry(config.company.country));
     addExtra('.information-company', config.company.email);
     addExtra('.information-company', config.company.vatId);
-    
-    $('#client-name').html(
+
+    setHtml('#client-name',
         fmtString(config.client.name));
-    $('#client-co').html(
+    setHtml('#client-co',
         fmtCareof(config.client.co));
-    $('#client-address').html(
+    setHtml('#client-address',
         fmtString(config.client.address));
-    $('#client-town').html(
+    setHtml('#client-town',
         fmtLocation(config.client.zip, config.client.city, config.client.state));
-    $('#client-country').html(
+    setHtml('#client-country',
         fmtCountry(config.client.country));
     addExtra('.information-client', config.client.email);
     addExtra('.information-client', config.client.vatId);
 
-    $('.invoice-id').html(
+    setHtml('.invoice-id',
         fmtString(config.invoice.id));
-    $('.invoice-created').html(
+    setHtml('.invoice-created',
         fmtString(config.invoice.created));
-    $('.invoice-due').html(
+    setHtml('.invoice-due',
         fmtString(config.invoice.due));
 
-    $('.payment-method').html(
-        translate(config.invoice.paymentMethod));
-    if (config.invoice.paymentMethod == "wire") {
-        $('.payment-details').append('IBAN: ' + config.invoice.iban);
+    setHtml('.payment-method',
+        translate(config.payment.method));
+    if (config.payment.method == "wire") {
+        setHtml('.payment-details',
+            'IBAN: ' + config.payment.iban);
     }
 
     var total = 0;
@@ -178,11 +187,11 @@ function applyConfiguration(config) {
         code += '<td>' + project.name + '</td>';
         code += '<td>' + price + '</td>';
         code += '</tr>';
-        $('.invoice-items tr:last').after(code);
+        document.querySelector('.invoice-items tbody').innerHTML += code;
         total += project.amount;
     }
 
-    $('.invoice-summary .invoice-total').html(
+    setHtml('.invoice-summary .invoice-total',
         'Total: ' + fmtCurrency(total, config.currencySrc));
 
     if (config.currencySrc != config.currencyDest) {
@@ -190,9 +199,9 @@ function applyConfiguration(config) {
             config.currencyExchange = 1.0 / config.currencyExchangeInv;
         }
         var amountFinal = total * config.currencyExchange;
-        $('.invoice-summary .invoice-final').html(
+        setHtml('.invoice-summary .invoice-final',
             '*Total: ' + fmtCurrency(amountFinal, config.currencyDest));
-        $('.invoice-summary .invoice-exchange').html(
+        setHtml('.invoice-summary .invoice-exchange',
             `${translate('exchange-rate')} ${config.currencyDest}/${config.currencySrc}
              ${translate('on-day')} ${config.invoice.created}:
              ${fmtExchange(config.currencyExchange)}`);
@@ -201,8 +210,8 @@ function applyConfiguration(config) {
 
 function applyTranslation() {
     for (var key in language.strings.messages) {
-        var className = '.t-' + key;
-        $(className).html(translate(key));
+        var selector = '.t-' + key;
+        setHtml(selector, translate(key));
     }
 }
 

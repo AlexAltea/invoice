@@ -7,8 +7,8 @@
         "state": "Michigan",
         "country": "us"
     },
-    "invoice": {
-        "paymentMethod": "wire",
+    "payment": {
+        "method": "wire",
         "iban": "US12 3456 7890 1234 5678 9012"
     }
 }

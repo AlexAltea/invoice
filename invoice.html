@@ -20,7 +20,7 @@
                             <td class="title">
                                 <span class="t-invoice"></span>
                             </td>
-                            
+
                             <td>
                                 <span class="t-invoice"></span> #:
                                 <span class="invoice-id"></span>
@@ -36,7 +36,7 @@
                     </table>
                 </td>
             </tr>
-            
+
             <tr class="information">
                 <td colspan="2">
                     <table>
@@ -48,7 +48,7 @@
                                 <span id="company-town"></span><br>
                                 <span id="company-country"></span><br>
                             </td>
-                            
+
                             <td class="information-client">
                                 <span class="t-invoice-to"></span><br>
                                 <span id="client-name"></span><br>
@@ -62,14 +62,13 @@
                 </td>
             </tr>
         </table>
-            
+
         <table class="invoice-payment" cellpadding="0" cellspacing="0">
-            <tr class="heading">
-                <td>
-                    <span class="t-payment-method"></span>
-                </td>
-            </tr>
-            
+            <thead>
+                <tr>
+                    <td><span class="t-payment-method"></span></td>
+                </tr>
+            </thead>
             <tr class="details">
                 <td>
                     <span class="payment-method"></span><br>
@@ -78,21 +77,22 @@
             </tr>
         </table>
 
-        <table class="invoice-items" cellpadding="0" cellspacing="0">    
-            <tr class="heading">
-                <td><span class="t-item"></span></td>
-                <td><span class="t-price"></span></td>
-            </tr>
+        <table class="invoice-items" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <td><span class="t-item"></span></td>
+                    <td><span class="t-price"></span></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
         </table>
-        
+
         <div class="invoice-summary">
             <div class="invoice-total"></div>
             <div class="invoice-final"></div>
             <div class="invoice-exchange"></div>
         </div>
     </div>
-    <!-- Dependencies -->
-    <script src="externals/jquery-3.3.1.min.js"></script>
     <!-- Invoice -->
     <script src="invoice.js"></script>
 </body>
