@@ -6,9 +6,25 @@ Based on: https://github.com/sparksuite/simple-html-invoice-template.
 
 ## Usage
 
-```bash
-node build.js -l en -c config-project.json invoice.html
 ```
+node build.js -l <language> -c path/to/project.json path/to/template.html
+```
+
+For [example](example), after cloning this repository, the following command:
+
+```bash
+cd example
+node ../build.js -l en -c config-project.json ../invoice.html
+```
+
+will generate the following invoice:
+
+<p align="center">
+  <a href="example/invoice.pdf">
+    <img src="example/invoice.png" alt="Description of Image">
+  </a>
+</p>
+
 
 ## Tools
 
