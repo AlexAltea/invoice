@@ -2,7 +2,7 @@
     "locale": "es",
     "strings": {
         "messages": {
-            "invoice": "Factura",
+            "invoice": "Factura #",
             "invoice-from": "Factura de",
             "invoice-to": "Factura para",
             "invoice-created": "Fecha",
@@ -13,7 +13,9 @@
             "wire": "Transferencia bancaria",
             "price": "Importe",
             "item": "Descripción",
-            "co": "a/c"
+            "co": "a/c",
+            "vat": "IVA",
+            "bank": "Banco"
         },
         "normalization": {
         },

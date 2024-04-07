@@ -175,8 +175,14 @@ function applyConfiguration(config) {
     setHtml('.payment-method',
         translate(config.payment.method));
     if (config.payment.method == "wire") {
-        setHtml('.payment-details',
-            'IBAN: ' + config.payment.iban);
+        var details = 'IBAN: ' + config.payment.iban;
+        if (typeof config.payment.bank !== "undefined") {
+            details += `<br>${translate('bank')}: ` + config.payment.bank;
+        }
+        if (typeof config.payment.swift !== "undefined") {
+            details += '<br>SWIFT: ' + config.payment.swift;
+        }
+        setHtml('.payment-details', details);
     }
 
     var total = 0;
@@ -191,6 +197,17 @@ function applyConfiguration(config) {
         total += project.amount;
     }
 
+    if (config.company.country == 'ad' && config.language == 'ca') {
+        setHtml('.invoice-summary .invoice-subtotal',
+            'Subtotal: ' + fmtCurrency(total, config.currencySrc));
+        setHtml('.invoice-summary .invoice-vat',
+            'I.G.I.  (0%)*: 0,00 EUR');
+        setHtml('.invoice-summary .invoice-other',
+            'Altres: 0,00 EUR<br>&nbsp;');
+        setHtml('.invoice-footnotes',
+            "*No subjecte a I.G.I. d’acord amb l’article 43 del<br>" +
+            "&quot;Text Refós de la Llei 11/2012, del 21 de Juny, de l’impost General Indirecte&quot;");
+    }
     setHtml('.invoice-summary .invoice-total',
         'Total: ' + fmtCurrency(total, config.currencySrc));
 

@@ -3,9 +3,10 @@
     "strings": {
         "messages": {
             "invoice": "Factura",
+            "invoice-id": "Nº de factura",
             "invoice-from": "Factura de",
             "invoice-to": "Factura per a",
-            "invoice-created": "Data",
+            "invoice-created": "Data factura",
             "invoice-due": "Cobrament",
             "payment-method": "Mètode de pagament",
             "on-day": "el dia",
@@ -13,7 +14,9 @@
             "wire": "Transferència bancària",
             "price": "Import",
             "item": "Descripció",
-            "co": "a/c"
+            "co": "a/c",
+            "vat": "IVA",
+            "bank": "Banc"
         },
         "normalization": {
         },

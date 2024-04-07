@@ -116,3 +116,9 @@
     font-weight: 300;
     font-size: 12px;
 }
+
+.invoice-box .invoice-footnotes {
+    margin-top: 160px;
+    font-size: 12px;
+    line-height: 18px;
+}

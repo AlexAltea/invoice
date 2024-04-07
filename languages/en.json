@@ -3,6 +3,7 @@
     "strings": {
         "messages": {
             "invoice": "Invoice",
+            "invoice-id": "Invoice #",
             "invoice-from": "Invoice from",
             "invoice-to": "Invoice to",
             "invoice-created": "Created",
@@ -13,7 +14,9 @@
             "wire": "Wire transfer",
             "price": "Price",
             "item": "Item",
-            "co": "c/o"
+            "co": "c/o",
+            "vat": "VAT",
+            "bank": "Bank"
         },
         "normalization": {
             "á": "a", "é": "e", "í": "i", "ó": "o", "ú": "u",
