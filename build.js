@@ -33,7 +33,7 @@ parser.addArgument(['input'], {
 });
 
 var args = parser.parseArgs();
-if (typeof something === "undefined") {
+if (args.output === null) {
     args.output = `build/invoice-${args.language}.pdf`;
 }
 var invoiceRootRel = path.dirname(args.input);
@@ -44,7 +44,7 @@ var invoiceConfigData = JSON.stringify({
     parent: invoiceConfigPath,
     language: args.language,
 });
-fs.writeFileSync(invoiceConfigTempPath, invoiceConfigData); 
+fs.writeFileSync(invoiceConfigTempPath, invoiceConfigData);
 
 /* Server */
 console.log(`Serving: ${invoiceRootAbs}`);
